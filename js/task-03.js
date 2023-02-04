@@ -15,9 +15,17 @@ const images = [
 
 const galleryList = document.querySelector(".gallery");
 
-images.map((image) =>
-  galleryList.insertAdjacentHTML(
-    "afterbegin",
-    `<li><img src = "${image.url}" alt = "${image.alt}" ></img></li>`
-  )
-);
+// images.map((image) =>
+//   galleryList.insertAdjacentHTML(
+//     "afterbegin",
+//     `<li><img src = "${image.url}" alt = "${image.alt}" ></img></li>`
+//   )
+// );
+
+const imageItem = ({ url, alt }) => {
+  return `<li class="image__item"><img src="${url}" alt="${alt}" width=400></li>`;
+};
+
+const newGalleryList = images.map(imageItem).join(" ");
+
+galleryList.insertAdjacentHTML("afterbegin", newGalleryList);

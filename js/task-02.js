@@ -9,13 +9,25 @@ const ingredients = [
 
 const ingrList = document.querySelector('#ingredients')
 
-for (const ingredient of ingredients) {
-    const newIngr = document.createElement('li');
+// for (const ingredient of ingredients) {
+//     const newIngr = document.createElement('li');
 
-    newIngr.textContent = ingredient;
+//     newIngr.textContent = ingredient;
 
-    newIngr.classList.add('item')
+//     newIngr.classList.add('item')
 
-    ingrList.append(newIngr)
-}
-    console.log(ingrList);
+//     ingrList.append(newIngr)
+// }
+//     console.log(ingrList);
+
+const ingredientsMarkup = ingredients.map((ingredient) => {
+  const newIngr = document.createElement('li');
+
+  newIngr.textContent = ingredient;
+
+  newIngr.classList.add('item');
+  
+  return newIngr;
+})
+
+ingrList.append(...ingredientsMarkup);

@@ -28,9 +28,12 @@ button {
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
+  width: 1020px;
+  justify-content: center;
+  padding-left: 0;
 }
 
 .gallery img {
-  width: 60vw;
-  height: 50vh;
+  width: 500px;
+  height: 300px;
 }

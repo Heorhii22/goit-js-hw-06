@@ -11,6 +11,8 @@ const bodyChangedColor = document.querySelector('.color')
 const body = document.querySelector('body')
 
 btnChangeColor.addEventListener('click', () => {
-    body.style.backgroundColor = getRandomHexColor()
-    bodyChangedColor.textContent = body.style.backgroundColor
+    // body.style.backgroundColor = getRandomHexColor()
+    // bodyChangedColor.textContent = body.style.backgroundColor
+  bodyChangedColor.textContent = getRandomHexColor();
+  body.style.backgroundColor = bodyChangedColor.textContent;
 })
